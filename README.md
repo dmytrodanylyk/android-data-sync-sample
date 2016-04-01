@@ -10,9 +10,12 @@ Simple todo application to demonstrate Android Data Sync based on following artc
 
 In current synchronization schema we need 4 layers:
 
-- Sync
-- Storage
-- Communication
-- User Interface
+- [Sync](https://github.com/dmytrodanylyk/android-data-sync-sample/tree/master/app/src/main/java/com/todo/sync) *(Only notes sync is implemented)*
+- [Storage](https://github.com/dmytrodanylyk/android-data-sync-sample/tree/master/app/src/main/java/com/todo/db) *(Realm)*
+- [Communication](https://github.com/dmytrodanylyk/android-data-sync-sample/tree/master/app/src/main/java/com/todo/sync/event) *(Green Robot Event Bus v3.0)*
+- [User Interface](https://github.com/dmytrodanylyk/android-data-sync-sample/tree/master/app/src/main/java/com/todo/ui/notes)
+
+
+Observe android log cat for more info.
 
 [Video on YouTube](https://youtu.be/8u05NldhqGU)
