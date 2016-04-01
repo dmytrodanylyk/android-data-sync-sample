@@ -24,8 +24,13 @@
         </activity>
 
         <activity
-            android:name=".ui.NotesActivity"
-            android:label="Notes"
+            android:name=".ui.notes.NotesActivity"
+            android:label="@string/Notes"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.notes.NewNoteActivity"
+            android:label="@string/New_Note"
             android:screenOrientation="portrait" />
 
         <service android:name=".sync.SyncService" />

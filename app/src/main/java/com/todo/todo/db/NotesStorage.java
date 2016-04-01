@@ -8,6 +8,15 @@ import java.util.List;
 
 public class NotesStorage {
 
+    public static void save(@NonNull final Note data) {
+        Realm.getDefaultInstance().executeTransaction(new Realm.Transaction() {
+            @Override
+            public void execute(Realm realm) {
+                realm.copyToRealmOrUpdate(data);
+            }
+        });
+    }
+
     public static void save(@NonNull final List<Note> dataList) {
         Realm.getDefaultInstance().executeTransaction(new Realm.Transaction() {
             @Override

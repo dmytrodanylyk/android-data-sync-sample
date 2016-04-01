@@ -29,9 +29,9 @@ class NotesSync extends AbsSync {
         List<Note> noteList = NotesStorage.getAllModified(realm);
         if (!noteList.isEmpty()) {
             L.v("Notes POST request start");
+            simulateRequestDelay();
             L.v("%d modified items need to be uploaded to server", noteList.size());
             log(noteList);
-            simulateRequestDelay();
             NotesStorage.markAsNotModified(noteList);
             L.v("Notes POST request end");
         }
@@ -41,10 +41,10 @@ class NotesSync extends AbsSync {
     @Override
     protected void get() {
         L.v("Notes GET request start");
+        simulateRequestDelay();
         List<Note> noteList = generateNoteItems();
         L.v("%d new items available", noteList.size());
         log(noteList);
-        simulateRequestDelay();
         NotesStorage.save(noteList);
         L.v("Notes GET request end");
     }
@@ -52,10 +52,10 @@ class NotesSync extends AbsSync {
     @NonNull
     private List<Note> generateNoteItems() {
         Random random = new Random();
-        int itemsCount = random.nextInt(5);
+        int itemsCount = random.nextInt(4) + 1;
         List<Note> noteList = new ArrayList<>(itemsCount);
         for (int i = 0; i < itemsCount; i++) {
-            String title = String.format("Random note %s", new Date().toString());
+            String title = String.format("Random note from server\n%s", new Date().toString());
             Note note = new Note();
             note.setId(UUID.randomUUID().toString());
             note.setTitle(title);

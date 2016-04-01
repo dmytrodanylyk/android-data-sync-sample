@@ -1,4 +1,4 @@
-package com.todo.todo.ui;
+package com.todo.todo.ui.notes;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,6 +9,9 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import com.todo.todo.R;
 import com.todo.todo.db.NotesStorage;
 import com.todo.todo.sync.SyncService;
@@ -49,9 +52,29 @@ public class NotesActivity extends AppCompatActivity {
         super.onDestroy();
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.notes, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.addNote) {
+            NewNoteActivity.start(this);
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEvent(SyncEvent event) {
-        if (event.getType() == SyncType.NOTES && event.getStatus() == SyncStatus.COMPLETED) {
+        if (event.getType() == SyncType.NOTES && event.getStatus() == SyncStatus.IN_PROGRESS) {
+            if (!swipeView.isRefreshing()) {
+                swipeView.setRefreshing(true);
+            }
+        } else if (event.getType() == SyncType.NOTES && event.getStatus() == SyncStatus.COMPLETED) {
             swipeView.setRefreshing(false);
             adapter.notifyDataSetChanged();
         }

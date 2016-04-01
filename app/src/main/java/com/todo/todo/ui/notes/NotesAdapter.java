@@ -1,4 +1,4 @@
-package com.todo.todo.ui;
+package com.todo.todo.ui.notes;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;

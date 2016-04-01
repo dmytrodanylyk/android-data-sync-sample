@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import com.todo.todo.R;
 import com.todo.todo.sync.SyncService;
+import com.todo.todo.ui.notes.NotesActivity;
 
 public class MainActivity extends AppCompatActivity {
 
