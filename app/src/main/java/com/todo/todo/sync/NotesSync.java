@@ -28,25 +28,25 @@ class NotesSync extends AbsSync {
         Realm realm = Realm.getDefaultInstance();
         List<Note> noteList = NotesStorage.getAllModified(realm);
         if (!noteList.isEmpty()) {
-            L.v("Notes POST request start");
-            simulateRequestDelay();
+            L.d("Notes POST request start");
             L.v("%d modified items need to be uploaded to server", noteList.size());
             log(noteList);
-            NotesStorage.markAsNotModified(noteList);
-            L.v("Notes POST request end");
+            simulateRequestDelay();
+            NotesStorage.markAsNotModified(mapToIdList(noteList));
+            L.d("Notes POST request end");
         }
         realm.close();
     }
 
     @Override
     protected void get() {
-        L.v("Notes GET request start");
+        L.d("Notes GET request start");
         simulateRequestDelay();
         List<Note> noteList = generateNoteItems();
         L.v("%d new items available", noteList.size());
         log(noteList);
         NotesStorage.save(noteList);
-        L.v("Notes GET request end");
+        L.d("Notes GET request end");
     }
 
     @NonNull
@@ -55,10 +55,10 @@ class NotesSync extends AbsSync {
         int itemsCount = random.nextInt(4) + 1;
         List<Note> noteList = new ArrayList<>(itemsCount);
         for (int i = 0; i < itemsCount; i++) {
-            String title = String.format("Random note from server\n%s", new Date().toString());
             Note note = new Note();
             note.setId(UUID.randomUUID().toString());
-            note.setTitle(title);
+            note.setTitle("Random note from server");
+            note.setCreatedDate(new Date());
             noteList.add(note);
 
         }
@@ -67,7 +67,7 @@ class NotesSync extends AbsSync {
 
     private void log(List<Note> noteList) {
         for (Note note : noteList) {
-            L.v("Note id: %s Title: %s IsModified: %s", note.getId(), note.getTitle(), note.isModified());
+            L.v("Note id: %s Title: %s Created date: %s IsModified: %s", note.getId(), note.getTitle(), note.getCreatedDate(),  note.isModified());
         }
     }
 
@@ -75,6 +75,16 @@ class NotesSync extends AbsSync {
         Random random = new Random();
         long millis = TimeUnit.SECONDS.toMillis(5);
         SystemClock.sleep(random.nextInt((int) millis));
+    }
+
+    @NonNull
+    private List<String> mapToIdList(List<Note> noteList) {
+        List<String> noteIdList = new ArrayList<>();
+        for (Note note : noteList) {
+            noteIdList.add(note.getId());
+        }
+
+        return noteIdList;
     }
 
 }

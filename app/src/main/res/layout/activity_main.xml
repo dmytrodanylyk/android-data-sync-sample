@@ -11,15 +11,15 @@
     tools:context=".ui.MainActivity">
 
     <Button
-        android:id="@+id/btnGet"
+        android:id="@+id/btnNotes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/Notes" />
 
     <Button
-        android:id="@+id/btnPost"
+        android:id="@+id/btnNotesClear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/Reminders" />
+        android:text="@string/Remove_all_notes" />
 
 </LinearLayout>

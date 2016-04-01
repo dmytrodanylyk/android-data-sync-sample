@@ -14,6 +14,7 @@ class SyncManager {
         syncMap = new HashMap<>();
         syncMap.put(SyncType.NOTES, new NotesSync(context));
         syncMap.put(SyncType.REMINDERS, new RemindersSync(context));
+        syncMap.put(SyncType.PROFILE, new RemindersSync(context));
     }
 
     void doSync(@NonNull SyncType syncType) {

@@ -18,6 +18,7 @@ import com.todo.todo.sync.event.SyncEvent;
 import com.todo.todo.sync.event.SyncStatus;
 import com.todo.todo.sync.event.SyncType;
 
+import java.util.Date;
 import java.util.UUID;
 
 public class NewNoteActivity extends AppCompatActivity {
@@ -63,6 +64,8 @@ public class NewNoteActivity extends AppCompatActivity {
         Note note = new Note();
         note.setId(UUID.randomUUID().toString());
         note.setTitle(title);
+        note.setCreatedDate(new Date());
+        note.setModified(true); // upload to server indicator
         NotesStorage.save(note);
     }
 }

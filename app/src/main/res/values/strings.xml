@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">todo</string>
     <string name="Notes">Notes</string>
-    <string name="Reminders">Reminders</string>
+    <string name="Remove_all_notes">Remove all notes</string>
     <string name="New_Note">New Note</string>
     <string name="Title">Title</string>
     <string name="Create">Create</string>
