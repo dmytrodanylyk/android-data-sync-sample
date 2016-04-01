@@ -1,4 +1,4 @@
-package com.todo.todo.ui.notes;
+package com.todo.ui.notes;
 
 import android.graphics.Typeface;
 import android.support.annotation.NonNull;
@@ -10,7 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import com.todo.todo.data.Note;
+import com.todo.data.Note;
 
 import java.util.List;
 

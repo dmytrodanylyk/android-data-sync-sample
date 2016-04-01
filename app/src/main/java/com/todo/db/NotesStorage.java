@@ -1,9 +1,9 @@
-package com.todo.todo.db;
+package com.todo.db;
 
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import com.todo.todo.data.Note;
-import com.todo.todo.utils.L;
+import com.todo.data.Note;
+import com.todo.utils.L;
 import io.realm.Realm;
 
 import java.util.List;

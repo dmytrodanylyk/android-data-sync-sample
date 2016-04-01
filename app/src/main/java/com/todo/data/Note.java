@@ -1,4 +1,4 @@
-package com.todo.todo.data;
+package com.todo.data;
 
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;

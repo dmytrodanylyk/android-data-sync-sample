@@ -1,4 +1,4 @@
-package com.todo.todo.utils;
+package com.todo.utils;
 
 import android.util.Log;
 

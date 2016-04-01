@@ -1,4 +1,4 @@
-package com.todo.todo.sync;
+package com.todo.sync;
 
 import android.app.Service;
 import android.content.Context;
@@ -6,10 +6,10 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import com.todo.todo.sync.event.EventBusManager;
-import com.todo.todo.sync.event.SyncRequestEvent;
-import com.todo.todo.sync.event.SyncType;
-import com.todo.todo.utils.L;
+import com.todo.sync.event.EventBusManager;
+import com.todo.sync.event.SyncRequestEvent;
+import com.todo.sync.event.SyncType;
+import com.todo.utils.L;
 import org.greenrobot.eventbus.Subscribe;
 
 import java.util.concurrent.ExecutorService;

@@ -1,18 +1,18 @@
-package com.todo.todo.sync;
+package com.todo.sync;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
-import com.todo.todo.sync.event.SyncType;
+import com.todo.sync.event.SyncType;
 
-class RemindersSync extends AbsSync {
+class ProfileSync extends AbsSync {
 
-    RemindersSync(@NonNull Context context) {
+    ProfileSync(@NonNull Context context) {
         super(context);
     }
 
     @Override
     protected SyncType getSyncType() {
-        return SyncType.REMINDERS;
+        return SyncType.PROFILE;
     }
 
     @Override

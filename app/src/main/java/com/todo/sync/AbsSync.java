@@ -1,11 +1,11 @@
-package com.todo.todo.sync;
+package com.todo.sync;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
-import com.todo.todo.sync.event.SyncEvent;
-import com.todo.todo.sync.event.SyncStatus;
-import com.todo.todo.sync.event.SyncType;
-import com.todo.todo.utils.NetworkUtils;
+import com.todo.sync.event.SyncEvent;
+import com.todo.sync.event.SyncStatus;
+import com.todo.sync.event.SyncType;
+import com.todo.utils.NetworkUtils;
 
 abstract class AbsSync {
 

@@ -1,8 +1,8 @@
-package com.todo.todo.sync;
+package com.todo.sync;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
-import com.todo.todo.sync.event.SyncType;
+import com.todo.sync.event.SyncType;
 
 import java.util.HashMap;
 

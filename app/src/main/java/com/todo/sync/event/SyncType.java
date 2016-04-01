@@ -1,4 +1,4 @@
-package com.todo.todo.sync.event;
+package com.todo.sync.event;
 
 public enum SyncType {
     NOTES,

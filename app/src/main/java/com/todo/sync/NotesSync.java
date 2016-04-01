@@ -1,12 +1,12 @@
-package com.todo.todo.sync;
+package com.todo.sync;
 
 import android.content.Context;
 import android.os.SystemClock;
 import android.support.annotation.NonNull;
-import com.todo.todo.data.Note;
-import com.todo.todo.db.NotesStorage;
-import com.todo.todo.sync.event.SyncType;
-import com.todo.todo.utils.L;
+import com.todo.data.Note;
+import com.todo.db.NotesStorage;
+import com.todo.sync.event.SyncType;
+import com.todo.utils.L;
 import io.realm.Realm;
 
 import java.util.*;

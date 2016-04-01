@@ -1,12 +1,12 @@
-package com.todo.todo.ui;
+package com.todo.ui;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import com.todo.todo.R;
-import com.todo.todo.db.NotesStorage;
-import com.todo.todo.sync.SyncService;
-import com.todo.todo.ui.notes.NotesActivity;
+import com.todo.R;
+import com.todo.db.NotesStorage;
+import com.todo.sync.SyncService;
+import com.todo.ui.notes.NotesActivity;
 
 public class MainActivity extends AppCompatActivity {
 

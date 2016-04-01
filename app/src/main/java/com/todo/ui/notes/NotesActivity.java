@@ -1,4 +1,4 @@
-package com.todo.todo.ui.notes;
+package com.todo.ui.notes;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -12,13 +12,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import com.todo.todo.R;
-import com.todo.todo.db.NotesStorage;
-import com.todo.todo.sync.SyncService;
-import com.todo.todo.sync.event.EventBusManager;
-import com.todo.todo.sync.event.SyncEvent;
-import com.todo.todo.sync.event.SyncStatus;
-import com.todo.todo.sync.event.SyncType;
+import com.todo.R;
+import com.todo.db.NotesStorage;
+import com.todo.sync.SyncService;
+import com.todo.sync.event.EventBusManager;
+import com.todo.sync.event.SyncEvent;
+import com.todo.sync.event.SyncStatus;
+import com.todo.sync.event.SyncType;
 import io.realm.Realm;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;

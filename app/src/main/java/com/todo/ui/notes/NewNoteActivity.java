@@ -1,4 +1,4 @@
-package com.todo.todo.ui.notes;
+package com.todo.ui.notes;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,13 +10,13 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-import com.todo.todo.R;
-import com.todo.todo.data.Note;
-import com.todo.todo.db.NotesStorage;
-import com.todo.todo.sync.SyncService;
-import com.todo.todo.sync.event.SyncEvent;
-import com.todo.todo.sync.event.SyncStatus;
-import com.todo.todo.sync.event.SyncType;
+import com.todo.R;
+import com.todo.data.Note;
+import com.todo.db.NotesStorage;
+import com.todo.sync.SyncService;
+import com.todo.sync.event.SyncEvent;
+import com.todo.sync.event.SyncStatus;
+import com.todo.sync.event.SyncType;
 
 import java.util.Date;
 import java.util.UUID;
