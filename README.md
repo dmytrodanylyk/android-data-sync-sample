@@ -1,5 +1,11 @@
 ### Android Data Sync application sample
 
+<img src="art/screenshot1.png" width="340" />
+<img src="art/screenshot2.png" width="340" />
 
+Simple todo application to demonstrate Android Data Sync based on following artciles:
 
-<iframe width="480" height="360" src="https://www.youtube.com/embed/8u05NldhqGU" frameborder="0" allowfullscreen></iframe>
+- [Android Data Sync - Part 1](http://www.dmytrodanylyk.com/android-data-sync-part-1/)
+- Android Data Sync - Part 2 (IN PROGRESS)
+
+[Video on YouTube](https://youtu.be/8u05NldhqGU)
